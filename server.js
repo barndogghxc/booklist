@@ -7,7 +7,7 @@ const logger = require('morgan');
 const app = express();
 
 app.get('/', function(req, res){
-	res.send('hello goat');
+	res.send('hello goat this is a booklist');
 });
 
 app.listen(port, function(){
