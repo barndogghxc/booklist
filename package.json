@@ -6,13 +6,19 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "dev": "nodemon sever.js"
+    "dev": "nodemon sever.js",
+    "debug": "nodemon --inspect"
   },
-  "author": "",
+  "author": "bom",
   "license": "ISC",
   "dependencies": {
     "ejs": "^2.5.7",
     "express": "^4.16.2",
-    "morgan": "^1.9.0"
+    "goodreads": "^0.1.0",
+    "morgan": "^1.9.0",
+    
+  },
+  "devDependencies": {
+    "nodemon": "^1.15.1"
   }
 }
