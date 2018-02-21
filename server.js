@@ -17,7 +17,7 @@ app.use(logger('dev'));
 // Home Route
 app.get('/', function(req, res){
 	res.json({
-		message: 'hello goat this is a booklist';
+		message: 'hello goat this is a booklist'
 	});
 });
 

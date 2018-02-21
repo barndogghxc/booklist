@@ -23,7 +23,7 @@ module.exports = {
 		return db.one(`UPDATE books
 		SET Title=$[Title], Author=$[Author], Average_Rating=$[Average_Rating], Number_of_Pages=$[Number_of_Pages]
 		WHERE id=$[id]
-		RETURNING *` book);
+		RETURNING *`, book);
 	},
 
 	destroy (id) {
