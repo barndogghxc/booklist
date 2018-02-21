@@ -13,6 +13,8 @@ const port = process.env.PORT || 3000;
 // Init App
 const app = express();
 
+app.set('view engine', 'ejs')
+
 // Logging
 app.use(logger('dev'));
 
@@ -20,8 +22,9 @@ app.use(bodyParser.json());
 
 // Home Route
 app.get('/', function(req, res){
-	res.json({
-		message: 'hello goat this is a booklist'
+	res.render('index', {
+		title: 'Books App',
+		heading: 'welcome to the books app!'
 	});
 });
 
