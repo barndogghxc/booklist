@@ -3,7 +3,9 @@ const express = require('express');
 
 const logger = require('morgan');
 
-const bookRoutes = require('./routes/book-routes');
+const bodyParser = require('body-parser');
+
+const booksRouter = require('./routes/book-routes');
 
 const port = process.env.PORT || 3000;
 
@@ -14,6 +16,8 @@ const app = express();
 // Logging
 app.use(logger('dev'));
 
+app.use(bodyParser.json());
+
 // Home Route
 app.get('/', function(req, res){
 	res.json({
@@ -22,7 +26,7 @@ app.get('/', function(req, res){
 });
 
 // Middleware
-app.use('/books', bookRoutes);
+app.use('/books', booksRouter);
 
 // Error handling
 app.use('*', function(req, res){
