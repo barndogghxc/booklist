@@ -3,11 +3,10 @@ const express = require('express');
 
 const logger = require('morgan');
 
-const goodreads = require('goodreads');
+const bookRoutes = require('./routes/book-routes');
 
 const port = process.env.PORT || 3000;
 
-const bookRoutes = require('./routes/book-routes');
 
 // Init App
 const app = express();
